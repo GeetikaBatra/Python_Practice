@@ -1,16 +1,22 @@
 <html>
     <head>
-        <title>Geetika Batra;s Blog<title>
+        <title>Geetika Batra's Blog</title>
     </head>
-    <body>
-       <div>
-       <h1><a href="">Geetika Batra's blog</a></h1>
-       </div>
+<body>
+<div>
+<h1><a href="">Geetika Batra's blog</a></h1>
+</div>
+<div>
+{% for post in posts %}
+<div>
+   <p>published: {{ post.published_date }}</p>
+   <h1><a href="">{{ post.title }}</a></h1>
+   <p>{{ post.text|linebreaks }}</p>
 
-	<div>
-	   <p>published:26th January 2015</p>
-           <h2><a href="">Learn IT Girl</a></h2>
- 	   <p> Learn IT Girl is an amazing programme reaching out several girls inorder to teach them programming and contribute to the Industry </p>
+</div>
+
+
+{% endfor %} 
 </div>
 </body>
 </html>
