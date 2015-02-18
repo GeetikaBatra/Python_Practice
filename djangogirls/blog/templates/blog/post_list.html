@@ -1,15 +1,10 @@
-<html>
-    <head>
-        <title>Geetika Batra's Blog</title>
-    </head>
-<body>
-<div>
-<h1><a href="">Geetika Batra's blog</a></h1>
-</div>
-<div>
+
+{% extends 'blog/base.html' %}
+{% block content %}
 {% for post in posts %}
-<div>
-   <p>published: {{ post.published_date }}</p>
+<div class="post">
+	<div class="date">
+   <p>{{ post.published_date }}</p>
    <h1><a href="">{{ post.title }}</a></h1>
    <p>{{ post.text|linebreaks }}</p>
 
@@ -17,7 +12,5 @@
 
 
 {% endfor %} 
-</div>
-</body>
-</html>
+{% endblock content %}
 
